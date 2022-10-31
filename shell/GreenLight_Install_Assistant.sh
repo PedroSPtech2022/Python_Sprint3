@@ -1,4 +1,7 @@
+VERSAO=18
 echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Olá sou seu assistente de instalação irei acompanhar os processos e te notificar dos passos a seguir !"
+echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Após a compra dos serviços da MoniToll, precisamos instalar algumas aplicações e bibliotecas no seu sistema."
+echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Python3, Python3-PIP, ODBC Driver SQL, Java, Kotlin."
 echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Vamos atualizar seu sistema antes verificar se temos o ODBC instalado."
 sudo apt update && sudo apt upgrade -y
 echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Sistema atualizado com sucesso :)"
