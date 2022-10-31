@@ -18,11 +18,13 @@ if [ apt-cache search msodbc -eq 0 ]
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Você já tem o ODBC instalado!!!"
 	else
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Opa! Não identifiquei nenhuma versão do ODBC instalado, mas sem problemas, irei resolver isso agora!"
+		sleep 1.5
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Confirme para mim se realmente deseja instalar o ODBC (S/N)?"
 	read inst
 	if [ \"$inst\" == \"S\" ]
 		then
 			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Ok! Você escolheu instalar o ODBC ;D"
+			sleep 1.5
 			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Adicionando o repositório !"
 			sleep 2
             curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
