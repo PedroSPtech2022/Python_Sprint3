@@ -1,9 +1,5 @@
 import psutil
 
-# primeiro comando teste
-temp = psutil.sensors_temperatures()
-print(temp)
-
 # segundo bloco de comando teste
 data = psutil.sensors_temperatures()
 print('\n--- type ---')
