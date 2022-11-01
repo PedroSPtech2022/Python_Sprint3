@@ -1,7 +1,7 @@
 import psutil
 
 # primeiro comando teste
-temp = (psutil.sensors_temperatures().get('coretemp')[0][1])
+temp = psutil.sensors_temperatures().get(('coretemp')[0][1])
 print(temp)
 
 # segundo bloco de comando teste
