@@ -1,8 +1,8 @@
 import psutil
 
 # primeiro comando teste
-temCPU = psutil.sensors_temperatures()["cpu_thermal"][0]
-print(temCPU.current)
+temp=(psutil.sensors_temperatures().get('acpitz')[0][1])
+print(temp)
 
 # segundo bloco de comando teste
 data = psutil.sensors_temperatures()
