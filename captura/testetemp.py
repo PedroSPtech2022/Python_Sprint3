@@ -1,7 +1,7 @@
 import psutil
 
 # primeiro comando teste
-temCPU = psutil.sensors_temperatures()
+temCPU = psutil.sensors_temperatures()["cpu_thermal"][0]
 print(temCPU.current)
 
 # segundo bloco de comando teste
