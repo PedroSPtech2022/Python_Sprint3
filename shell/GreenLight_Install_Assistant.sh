@@ -150,17 +150,7 @@ if [ $? -eq 0 ]
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Você optou por não instalar o Python3 e o PIP por enquanto, até a próxima então!"
 	fi
 fi
-
-echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Você autoriza a continuação da instalação de bibliotecas Python (S/N)?"
-read inst
-if [ \"$inst\" == \"S\" ]
-		then
-			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Ok! Você autorizou e as bibliotecas serão instaladas ;D"
-			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Adicionando o repositório !"
-			sleep 2
-		else 	
-		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Você optou por não instalar o Python3 e o PIP por enquanto, até a próxima então!"
-fi		
+sleep 1.5
 echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Atualizando pacotes..."
 sudo apt update -y
 echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Pacotes atualizados..."
