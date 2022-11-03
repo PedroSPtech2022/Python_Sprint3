@@ -95,7 +95,10 @@ if [ \"$inst\" == \"S\" ]
 			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Ok! Você autorizou e as bibliotecas serão instaladas ;D"
 			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Adicionando o repositório !"
 			sleep 2
-		    python3 PythonLinux.py
+		    pip install psutil
+			pip install -U textwrap3
+			pip install numpy
+			pip install pyodbc
 		else 	
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Você optou por não instalar o Python3 e o PIP por enquanto, até a próxima então!"
 fi		
