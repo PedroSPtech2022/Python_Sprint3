@@ -40,7 +40,7 @@ if [ $? -eq 0 ]
 	fi
 fi
 
-kotlin -version
+snap info kotlin
 if [ $? -eq 0 ]
 	then
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Você já tem o kotlin instalado!!!"
@@ -55,6 +55,7 @@ if [ $? -eq 0 ]
 			sleep 2
 			curl -s https://get.sdkman.io | bash
             sdk install kotlin
+			sudo apt install kotlin
 			clear
 			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Atualizando! Quase lá."
 			sleep 2

@@ -137,7 +137,7 @@ fi
 
 echo  "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Verificando aqui se você possui o Kotlin instalado...;"
 sleep 1.5
-kotlin -version
+snap info kotlin
 if [ $? -eq 0 ]
 	then
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Você já tem o kotlin instalado!!!"
