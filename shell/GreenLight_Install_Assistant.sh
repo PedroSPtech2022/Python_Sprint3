@@ -13,7 +13,7 @@ echo  "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Verificando aqui se voc�
 sleep 2
 
 apt-cache search msodbc
-if [ apt-cache search msodbc -eq 0 ]
+if [ apt-cache search msodbc -eq msodbcsql18 - ODBC Driver for Microsoft(R) SQL Server(R) ]
 	then
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Você já tem o ODBC instalado!!!"
 	else
@@ -100,11 +100,11 @@ fi
 
 VERSAO2=11
 
-
+echo  "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Verificando aqui se você possui o Java instalado...;"
 java -version
 if [ $? -eq 0 ]
 	then
-		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Você já tem o java instalado!!!"
+		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Você já tem o Java instalado!."
 	else
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Opa! Não identifiquei nenhuma versão do Java instalado, mas sem problemas, irei resolver isso agora!"
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Confirme para mim se realmente deseja instalar o Java (S/N)?"
