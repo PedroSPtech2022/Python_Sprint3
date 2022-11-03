@@ -7,7 +7,7 @@ echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Após a compra dos serviç
 sleep 1.5
 echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Python3, Python3-PIP, ODBC Driver SQL, Java, Kotlin."
 sleep 1.5
-echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Vamos atualizar seu sistema antes verificar se temos alguma das aplicações instalada."
+echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Vamos atualizar seu sistema antes verificar se temos algumas das aplicações instalada."
 sudo apt update && sudo apt upgrade -y
 echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Sistema atualizado com sucesso :)"
 sleep 1.5
@@ -19,9 +19,11 @@ java -version
 if [ $? -eq 0 ]
 	then
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Você já tem o Java instalado!."
+		sleep 1.5
 	else
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Opa! Não identifiquei nenhuma versão do Java instalado, mas sem problemas, irei resolver isso agora!"
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Confirme para mim se realmente deseja instalar o Java (S/N)?"
+		sleep 1.5
 	read inst
 	if [ \"$inst\" == \"S\" ]
 		then
@@ -45,6 +47,7 @@ if [ $? -eq 0 ]
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Você optou por não instalar o Java por enquanto, até a próxima então!"
 	fi
 fi
+sleep 1.5
 
 echo  "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Verificando aqui se você possui o Kotlin instalado...;"
 sleep 1.5
@@ -52,9 +55,11 @@ snap info kotlin
 if [ $? -eq 0 ]
 	then
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Você já tem o kotlin instalado!!!"
+		sleep 1.5
 	else
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Opa! Não identifiquei nenhuma versão do kotlin instalado, mas sem problemas, irei resolver isso agora!"
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Confirme para mim se realmente deseja instalar o Kotlin (S/N)?"
+		sleep 1.5
 	read inst
 	if [ \"$inst\" == \"S\" ]
 		then
@@ -72,7 +77,7 @@ if [ $? -eq 0 ]
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Você optou por não instalar o Kotlin por enquanto, até a próxima então!"
 	fi
 fi
-
+sleep 1.5
 
 echo  "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Verificando aqui se você possui o ODBC instalado...;"
 sleep 1.5
@@ -80,10 +85,12 @@ apt-cache search msodbc
 if [ $? -eq 0 ]
 	then
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Você já tem o ODBC instalado!!!"
+		sleep 1.5
 	else
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Opa! Não identifiquei nenhuma versão do ODBC instalado, mas sem problemas, irei resolver isso agora!"
 		sleep 1.5
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Confirme para mim se realmente deseja instalar o ODBC (S/N)?"
+		sleep 1.5
 	read inst
 	if [ \"$inst\" == \"S\" ]
 		then
@@ -118,6 +125,7 @@ if [ $? -eq 0 ]
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Você optou por não instalar o ODBC por enquanto, até a próxima então!"
 	fi
 fi
+sleep 1.5
 
 PURPLE='0;35'
 NC='\033[0m' 
@@ -129,9 +137,11 @@ python --version
 if [ $? -eq 0 ]
 	then
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Você já tem o Python3 instalado!!!"
+		sleep 1.5
 	else
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Opa! Não identifiquei nenhuma versão do Python3 instalado, mas sem problemas, irei resolver isso agora!"
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Confirme para mim se realmente deseja instalar o Python3 e o PIP (S/N)?"
+		sleep 1.5
 	read inst
 	if [ \"$inst\" == \"S\" ]
 		then
@@ -155,5 +165,5 @@ echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Atualizando pacotes..."
 sudo apt update -y
 echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Pacotes atualizados..."
 sleep 1.5
-echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Script Finalizado por favor Inicie o 2 Script..."
+echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Script finalizado por favor inicie o 2° Script..."
 sleep 2.5
