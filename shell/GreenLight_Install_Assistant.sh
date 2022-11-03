@@ -13,7 +13,7 @@ echo  "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Verificando aqui se voc�
 sleep 2
 
 apt-cache search msodbc
-if [ apt-cache search msodbc -eq msodbcsql18 - ODBC Driver ]
+if [ apt-cache search msodbc -eq "msodbcsql18 - ODBC Driver for Microsoft(R) SQL Server(R)" ]
 	then
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Você já tem o ODBC instalado!!!"
 	else
