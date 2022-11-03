@@ -13,7 +13,7 @@ echo  "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Verificando aqui se voc�
 sleep 2
 
 apt-cache search msodbc
-if [ apt-cache search msodbc -eq "msodbcsql18 - ODBC Driver for Microsoft(R) SQL Server(R)" ]
+if [ $? -eq "msodbcsql18 - ODBC Driver for Microsoft(R) SQL Server(R)" ]
 	then
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Você já tem o ODBC instalado!!!"
 	else
@@ -101,6 +101,7 @@ fi
 VERSAO2=11
 
 echo  "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Verificando aqui se você possui o Java instalado...;"
+sleep 1.5
 java -version
 if [ $? -eq 0 ]
 	then
@@ -132,6 +133,8 @@ if [ $? -eq 0 ]
 	fi
 fi
 
+echo  "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Verificando aqui se você possui o Kotlin instalado...;"
+sleep 1.5
 kotlin -version
 if [ $? -eq 0 ]
 	then
