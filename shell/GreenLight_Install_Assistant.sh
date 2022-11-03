@@ -1,3 +1,5 @@
+PURPLE='0;35'
+NC='\033[0m' 
 VERSAO=18
 echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Olá sou seu assistente de instalação irei acompanhar os processos e te notificar dos passos a seguir !"
 sleep 1.5
@@ -12,8 +14,8 @@ sleep 1.5
 echo  "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Verificando aqui se você possui o ODBC instalado...;"
 sleep 2
 
-odbcinst -q -d -n
-if [ $? -eq "[ODBC Driver 18 for SQL Server]"]
+apt-cache search msodbc
+if [ $? -eq 0 ]
 	then
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Você já tem o ODBC instalado!!!"
 	else
