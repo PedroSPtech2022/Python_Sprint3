@@ -52,6 +52,7 @@ def teste():
         global datahora
         datahora = datetime.datetime.now().strftime('%d/%m/%Y %H:%M:%S')
         print(datahora)
+        global var_leitura2
         var_leitura2 = 31
         global desempenho
         desempenho = 3.5        
