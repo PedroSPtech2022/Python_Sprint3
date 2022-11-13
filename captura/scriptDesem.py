@@ -49,10 +49,12 @@ def Conexao():
 
 def teste():
         print("Inserindo leitura no banco...")
+        global datahora
         datahora = datetime.datetime.now().strftime('%d/%m/%Y %H:%M:%S')
         print(datahora)
         var_leitura2 = 31
-        desempenho = 3.5
+        global desempenho
+        desempenho = 3.5        
         idTorre = 136
         
         try:
@@ -67,13 +69,14 @@ def teste():
             cnxn.rollback()
             print("Something went wrong: {}".format(err))
 
+def teste2():
         if (var_leitura2 > 30):
                 var_leitura2 = desempenho 
         try:
             # Executando comando SQL   
             crsr.execute('''
         INSERT INTO Leitura (Leitura, DataHora, fkTorre, fkComponente) VALUES (?, ?, ?, ?)
-        ''',var_leitura2, datahora, idTorre , 24)
+        ''',var_leitura2, datahora, 136 , 24)
             # Commit de mudanças no banco de dados
             crsr.commit()
             print("Leitura inserida no banco")
@@ -88,4 +91,5 @@ def teste():
 Conexao()
 while True:
     teste()
+    teste2()
     time.sleep(5)
