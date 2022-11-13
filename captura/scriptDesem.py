@@ -67,7 +67,7 @@ def teste():
             crsr.commit()
             print("Leitura inserida no banco")
         except pyodbc.Error as err:
-            cnxn.rollback()
+            crsr.rollback()
             print("Something went wrong: {}".format(err))
 
 def teste2():
@@ -83,10 +83,10 @@ def teste2():
             print("Leitura inserida no banco")
 
         except pyodbc.Error as err:
-            cnxn.rollback()
+            crsr.rollback()
             print("Something went wrong: {}".format(err))
         else:
-            cnxn.rollback()
+            crsr.rollback()
             print("Something went wrong: {}".format(err))     
             
 Conexao()
