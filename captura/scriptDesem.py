@@ -44,12 +44,7 @@ def Conexao():
         print("Conectado ao banco de dados: MoniToll")
 
 # Bloco pegar temperatura 
-data = psutil.sensors_temperatures()
-core = data['coretemp']
-item = core[0]
-global tempcpu
-tempcpu = item.current
-perdaDese = 3.5 
+
 
 
 def teste():
