@@ -76,7 +76,7 @@ def teste():
             # Executando comando SQL   
             crsr.execute('''
         INSERT INTO Leitura (Leitura, DataHora, fkTorre, fkComponente) VALUES (?, ?, ?, ?)
-        ''',var_leitura2, datahora, idTorre , y)
+        ''',67, datahora, 136 , 23)
             # Commit de mudanças no banco de dados
             crsr.commit()
             print("Leitura inserida no banco")
@@ -91,8 +91,10 @@ def teste2():
         print(datahora)
         
 
-        if (var_leitura > 55 | var_leitura2 > 55):
+        if (var_leitura > 55 & var_leitura < 64 | var_leitura2 > 55 & var_leitura2 < 64):
             var_leitura2 = 3.5
+        elif(var_leitura >= 65 | var_leitura2 >= 65):
+            var_leitura2 = 7.0    
         try:
             # Executando comando SQL   
             crsr.execute('''

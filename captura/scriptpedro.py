@@ -181,7 +181,6 @@ def teste():
             var_leitura2 = var_leitura
         print(var_leitura2)
 
-        
         try:
             # Executando comando SQL   
             crsr.execute('''
