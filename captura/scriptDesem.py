@@ -67,8 +67,7 @@ def teste():
             cnxn.rollback()
             print("Something went wrong: {}".format(err))
 
-        if strNome == 'temperatura':
-            if (var_leitura2 > 30):
+        if (var_leitura2 > 30):
                 var_leitura2 = desempenho 
         try:
             # Executando comando SQL   
